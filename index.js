@@ -4,10 +4,6 @@ const fs = require("fs");
 const app = express();
 const port = 3000;
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
-
 let csvData = [];
 
 app.get("/api/demand", (req, res) => {
@@ -25,4 +21,8 @@ app.get("/api/demand", (req, res) => {
 
       res.json(result);
     });
+});
+
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
