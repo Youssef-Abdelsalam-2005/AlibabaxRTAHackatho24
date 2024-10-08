@@ -11,7 +11,7 @@ app.listen(port, () => {
 let csvData = [];
 
 app.get("/api/demand", (req, res) => {
-  const filePath = "./taxidemand2.csv";
+  const filePath = "./taxidemand2 .csv";
   fs.createReadStream(filePath)
     .pipe(csv())
     .on("data", (data) => {
